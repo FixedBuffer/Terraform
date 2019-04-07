@@ -19,46 +19,12 @@ variable "AZURE_REGION" {
   default     = "West Europe"
 }
 
-variable "BASE_PREFIX" {
-  description = "The prefix applied to all resource names."
-}
-
-variable "APP_PREFIX" {
-  description = "The prefix applied to all aplication names."
-}
-
-variable "TAG_COST_CENTER" {
-  description = "Value of the cost center"
-}
-
-variable "TAG_OWNER" {
-  description = "Name of the client side owner"
-}
-
 variable "ENVIRONMENT" {
   description = "Enviroment to deploy"
 }
 
 variable "RESOURCE_GROUP_NAME" {
   description = "Name of the resource group"
-}
-
-variable "VNET_NAME" {
-  description = "Name of client vNet"
-}
-
-variable "VSUBNET_NAME" {
-  description = "Name of the new subnet"
-}
-
-variable "VSUBNET_ADDRESS_PREFIX" {}
-
-variable "STORAGE_REPLICATION" {
-  description = "Type of storage replication"
-}
-
-variable "STORAGE_ACCOUNT_TIER" {
-  description = "Type of storage tier"
 }
 
 variable "SQL_SERVER_NAME" {
@@ -80,11 +46,3 @@ variable "SQL_PASSWORD" {
 variable "SQL_DB_NAME" {
   description = "Sql database name"
 }
-
-variable "STREAM_ANALITYCS_API_VERSION" {}
-
-variable "STREAM_ANALITYCS_SKU" {}
-
-variable "STREAM_ANALITYCS_JOB_TYPE" {}
-
-variable "STREAM_ANALITYCS_STREAMING_UNITS" {}
