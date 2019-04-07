@@ -48,7 +48,7 @@ variable "site_config" {
   default = []
 }
 
-variable "network_name" {
-  description = "Name of the VNet"
+variable "conection_string_value" {
+  description = "ConnectionString"
   type = "string"
 }

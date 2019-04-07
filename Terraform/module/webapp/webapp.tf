@@ -30,16 +30,12 @@ resource "azurerm_app_service" "webapp" {
   location             = "${azurerm_resource_group.webapp.location}"
   resource_group_name  = "${azurerm_resource_group.webapp.name}"
   app_service_plan_id  = "${azurerm_app_service_plan.webserviceplan.id}"
-  //site_config          = "${var.site_config}"
+  site_config          = "${var.site_config}"
   app_settings         = "${var.app_settings}"
 
-  site_config {
-    virtual_network_name  = "${var.network_name}"
-  }
-
   connection_string {
-    name  = "Database"
+    name  = "default"
     type  = "SQLServer"
-    value = "Server=some-server.mydomain.com;Integrated Security=SSPI"
+    value = "${var.conection_string_value}"
   }
 }
