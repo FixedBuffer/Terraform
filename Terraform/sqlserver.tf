@@ -1,3 +1,4 @@
+//Consumimos el modulo de Sql Server pasandole los datos necesarios
 module "sqlserver" {
   source                         = "./module/sqlserver"
   SQL_SERVER_RESOURCE_GROUP_NAME = "${azurerm_resource_group.terraformGroup.name}"

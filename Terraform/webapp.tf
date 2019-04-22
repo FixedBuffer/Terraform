@@ -1,3 +1,4 @@
+//Consumimos el modulo de la web pasandole los datos necesarios, como la cadena de conexión
 module "linuxwebapp" {
   source                 = "./module/webapp"
   name                   = "${azurerm_resource_group.terraformGroup.name}"
